@@ -1,4 +1,4 @@
-import Card from "../Reuse/Card";
+import Card from "../Reuse/UseCard";
 import LatestHotelInfo from "../Source/LatestHotelInfo";
 
 function shuffleArray(array) {

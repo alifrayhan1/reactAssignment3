@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "../Reuse/card";
+import Card from "../Reuse/UseCard";
 import RestaurantInfo from "../Source/RestaurantInfo";
 
 function Carousel() {
