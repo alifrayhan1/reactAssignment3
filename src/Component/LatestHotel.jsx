@@ -1,4 +1,4 @@
-import Card from "../Reuse/card";
+import Card from "./C:/webJourney/reactAsignment3/src/Reuse/Card.jsx";
 import LatestHotelInfo from "../Source/LatestHotelInfo";
 
 function shuffleArray(array) {
