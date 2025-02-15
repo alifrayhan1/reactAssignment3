@@ -10,6 +10,7 @@ function App() {
       <main className="p-4 space-y-5">
         <Navbar />
         <Routes>
+          <Route path="/" element={<Restaurant />} />
           <Route path="/restaurant" element={<Restaurant />} />
           <Route path="/bella" element={<Banner />} />
         </Routes>
