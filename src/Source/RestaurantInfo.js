@@ -5,6 +5,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "5",
       reviewCount: "876",
+      link:"/bottega"
     },
     {
       imageSrc: ["resImage2.png", "resImage1.png", "resImage3.png", "resImage4.png"],
@@ -12,6 +13,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "4.5",
       reviewCount: "876",
+      link:"/bella",
     },
     {
       imageSrc: ["resImage4.png", "resImage2.png", "resImage3.png", "resImage1.png"],
@@ -19,6 +21,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "5",
       reviewCount: "253",
+      link:"/shucker"
     },
     {
       imageSrc: ["resImage2.png", "resImage1.png", "resImage3.png", "resImage4.png"],
@@ -26,6 +29,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "5",
       reviewCount: "876",
+      link:"/bottega"
     },
     {
       imageSrc: ["resImage3.png", "resImage2.png", "resImage1.png", "resImage4.png"],
@@ -33,6 +37,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "1.5",
       reviewCount: "876",
+      link:"/bottega"
     },
     {
       imageSrc: ["resImage4.png", "resImage2.png", "resImage3.png", "resImage1.png"],
@@ -40,6 +45,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "2.5",
       reviewCount: "876",
+      link:"/bottega"
     },
     {
       imageSrc: ["resImage1.png", "resImage2.png", "resImage3.png", "resImage4.png"],
@@ -47,6 +53,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "3.5",
       reviewCount: "876",
+      link:"/bottega"
     },
     {
       imageSrc: ["resImage2.png", "resImage1.png", "resImage3.png", "resImage4.png"],
@@ -54,6 +61,7 @@ const RestaurantInfo = [
       description: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
       rating: "4.5",
       reviewCount: "876",
+      link:"/bottega"
     },
     
   ];

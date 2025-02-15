@@ -44,6 +44,7 @@ function Carousel() {
                   description={info.description}
                   rating={info.rating}
                   reviewCount={info.reviewCount}
+                  link={info.link}
                 />
               ))}
             </div>

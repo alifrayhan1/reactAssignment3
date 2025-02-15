@@ -7,7 +7,8 @@ function Navbar() {
   const [location, setLocation] = useState("");
   const navigate = useNavigate();
   const handelSubmit = () => {
-    navigate(`/search?query=${search}&location=${location}`);
+    // navigate(`/search?query=${search}&location=${location}`);
+    navigate(`/${search}&${location}`);
   };
 
   return (

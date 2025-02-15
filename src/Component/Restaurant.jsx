@@ -4,10 +4,12 @@ import Feedback from "./Feedback";
 import LatestHotel from "./LatestHotel";
 import Activities from "./Activity";
 import Footer from "./Footer";
+import Category from "./Category";
 
 function Restaurant() {
   return (
     <>
+      <Category/>
       <Carousel />
       <LatestHotel />
       <Discover />

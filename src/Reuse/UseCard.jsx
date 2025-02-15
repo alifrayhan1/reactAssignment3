@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Card({
   imageSrc,
@@ -7,9 +8,10 @@ function Card({
   rating,
   reviewCount,
   width = "285px",
-  background ="#F8F8F8",
+  background = "#F8F8F8",
   link,
 }) {
+  const navigate = useNavigate();
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -23,27 +25,41 @@ function Card({
   const onTouchMove = (e) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
+
   const onTouchEnd = () => {
     if (touchStart - touchEnd > 150) {
-      nextImage(); 
+      nextImage();
     }
     if (touchStart - touchEnd < -150) {
-      prevImage(); 
+      prevImage();
     }
   };
-  const nextImage = () => {
+
+  const nextImage = (e) => {
+    e.stopPropagation();
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageSrc.length);
   };
 
-  const prevImage = () => {
+  const prevImage = (e) => {
+    e.stopPropagation();
     setCurrentImageIndex(
       (prevIndex) => (prevIndex - 1 + imageSrc.length) % imageSrc.length
     );
   };
 
+  const handleClick = () => {
+    if (link) {
+      navigate(link);
+    }
+  };
+
   return (
     <section>
-      <div className="h-auto rounded-b-md rounded-2xl space-y-2 cursor-pointer" style={{ width, background }} onClick={link}>
+      <div
+        className="h-auto rounded-b-md rounded-2xl space-y-2 cursor-pointer"
+        style={{ width, background }}
+        onClick={handleClick}
+      >
         {/* Image */}
         <div className="relative">
           <img
@@ -54,20 +70,25 @@ function Card({
             alt="Card"
             className="w-full"
           />
+          {/* Image Indicator Dots */}
           <div className="flex justify-center items-center space-x-2 mt-2 absolute bottom-1 left-1/2 transform -translate-x-1/2">
             {imageSrc.map((_, index) => (
               <div
                 key={index}
-                onClick={() => setCurrentImageIndex(index)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentImageIndex(index);
+                }}
                 className={`w-2 h-2 rounded-full ${
                   index === currentImageIndex ? "bg-blue-500" : "bg-gray-300"
                 }`}
               ></div>
             ))}
           </div>
+          {/* Left Arrow */}
           <button
             onClick={prevImage}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2  text-white p-2 rounded-full"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full"
           >
             &lt;
           </button>
@@ -82,15 +103,12 @@ function Card({
         {/* Heading */}
         <div className="p-2.5 space-y-2">
           <h1 className="text-2xl font-bold">{heading}</h1>
-
           {/* Description */}
           <p className="text-gray-600">{description}</p>
-
           {/* Rating and Reviews */}
           <div className="flex gap-1 items-center">
             {[...Array(5)].map((_, index) => {
               if (index < fullStars) {
-                // Full star
                 return (
                   <img
                     key={index}
@@ -100,7 +118,6 @@ function Card({
                   />
                 );
               } else if (index === fullStars && hasHalfStar) {
-                // Half star
                 return (
                   <img
                     key={index}
@@ -110,7 +127,6 @@ function Card({
                   />
                 );
               } else {
-                // Empty star
                 return (
                   <img
                     key={index}
@@ -121,8 +137,7 @@ function Card({
                 );
               }
             })}
-
-            {/* Rating and Reviews */}
+            {/* Rating and Review Count */}
             <div className="flex items-center ml-0.5">
               <span className="font-bold">{rating}</span>
               <span className="text-gray-600"> ({reviewCount} reviews)</span>

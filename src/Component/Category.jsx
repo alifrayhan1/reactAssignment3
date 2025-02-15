@@ -19,10 +19,15 @@ function Category() {
             key={index}
             onClick={() => handleClick(index, info.link)}
             className={`cursor-pointer flex flex-col items-center ${
-              selectedIndex === index ? "text-primary underline" : "text-text"
+              selectedIndex === index ? "text-primary underline font-bold" : "text-text"
             } hover:text-primary hover:underline`}
           >
-            <img src={info.icon} alt={info.title} className="h-5 w-5 xs:h-8 xs:w-8" />
+            {/* Change icon based on selection */}
+            <img
+              src={selectedIndex === index ? info.icon.blue : info.icon.gray}
+              alt={info.title}
+              className="h-5 w-5 xs:h-8 xs:w-8"
+            />
             <p className="text-center text-xs xs:text-base">{info.title}</p>
           </div>
         ))}

@@ -1,65 +1,101 @@
 const CategoryInfo = [
   {
-    icon: "All.png",
+    icon: { 
+      gray: "./Category/All.svg",
+      blue: "./Category/AllH.svg"
+    },
     title: "All",
     link: "/home",
   },
   {
-    icon: "Restaurent.svg",
+    icon: { 
+      gray: "./Category/Restaurant.svg",
+      blue: "./Category/RestaurantH.svg"
+    },
     title: "Restaurants",
     link: "/restaurant",
   },
   {
-    icon: "Hotel.png",
+    icon: { 
+      gray: "./Category/Hotel.svg",
+      blue: "./Category/HotelH.svg"
+    },
     title: "Hotel",
     link: "/hotel",
   },
   {
-    icon: "Home.png",
+    icon: { 
+      gray: "./Category/Home.svg",
+      blue: "./Category/HomeH.svg"
+    },
     title: "Home services",
     link: "/homeservice",
   },
-
   {
-    icon: "Shop.png",
+    icon: { 
+      gray: "./Category/Shop.svg",
+      blue: "./Category/ShopH.svg"
+    },
     title: "Shopping",
     link: "/shop",
   },
   {
-    icon: "Spa.png",
+    icon: { 
+      gray: "./Category/Car.svg",
+      blue: "./Category/CarH.svg"
+    },
     title: "Car location",
     link: "/carlocation",
   },
   {
-    icon: "Spa.png",
+    icon: { 
+      gray: "./Category/Spa.svg",
+      blue: "./Category/SpaH.svg"
+    },
     title: "Beauty & Spa",
     link: "/spa",
   },
   {
-    icon: "Park.png",
+    icon: { 
+      gray: "./Category/Park.svg",
+      blue: "./Category/ParkH.svg"
+    },
     title: "Park",
     link: "/park",
   },
   {
-    icon: "Museum.png",
+    icon: { 
+      gray: "./Category/Museu.svg",
+      blue: "./Category/MuseuH.svg"
+    },
     title: "museum",
     link: "/museum",
   },
   {
-    icon: "Wash.png",
+    icon: { 
+      gray: "./Category/Wash.svg",
+      blue: "./Category/WashH.svg"
+    },
     title: "Car wash",
     link: "/carwash",
   },
   {
-    icon: "Bar.png",
+    icon: { 
+      gray: "./Category/Bar.svg",
+      blue: "./Category/BarH.svg"
+    },
     title: "Bars",
     link: "/bar",
   },
   {
-    icon: "Gym.png",
+    icon: { 
+      gray: "./Category/Gym.svg",
+      blue: "./Category/GymH.svg"
+    },
     title: "Gyms",
     link: "/gym",
   },
 ];
 
 export default CategoryInfo;
+
