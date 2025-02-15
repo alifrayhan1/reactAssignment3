@@ -6,7 +6,7 @@ function Banner({ rating = 4.5, reviewCount = 100 }) {
   const hasHalfStar = rating % 1 !== 0;
 
   return (
-    <section>
+    <section className="relative">
       <div className="bg-[url('/BellaImage/Banner.png')] bg-cover bg-no-repeat  p-6 space-y-5">
         <h1 className="text-4xl text-white font-bold">Bella Italia</h1>
 
@@ -65,6 +65,10 @@ function Banner({ rating = 4.5, reviewCount = 100 }) {
         </div>
 
       </div>
+      <div className="absolute -bottom-18 left-1/2 transform -translate-x-1/2">
+  <img src="/BellaImage/Stamp.png" alt="" className="h-[70%] w-[70%] xs:h-[80%] xs:w-[80%]" />
+</div>
+
     </section>
   );
 }

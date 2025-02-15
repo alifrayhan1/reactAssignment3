@@ -3,7 +3,7 @@ function Footer() {
   return (
     <>
         <section>
-            <div className="flex flex-wrap sm:justify-around space-x-10 space-y-10">
+            <div className="flex flex-wrap sm:justify-around space-x-10 space-y-10 border-t border-gray-200">
                 <div>
                     <h1 className="font-bold">About</h1>
                     <ul>
