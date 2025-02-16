@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Navbar from "./Component/Navbar";
+import Navbar from "./Component/Navbar"
 import Restaurant from "./Component/Restaurant";
 import Bella from "./Explor/Bella/Bella";
 import Hotel from "./Component/Hotel";
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <main className="p-4 space-y-5">
-        <Navbar />
+        <Navbar/>
         
         <Routes>
           <Route path="/" element={<Restaurant />} />
