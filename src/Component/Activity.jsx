@@ -20,9 +20,7 @@ function Activities() {
   return (
     <section>
       <div className="p-6 relative">
-        <h1 className="py-4 text-xl font-bold">
-          Recent Activities
-        </h1>
+        <h1 className="py-4 text-xl font-bold">Recent Activities</h1>
 
         <div className="relative">
           <div className="flex items-center space-x-4 overflow-x-hidden">
@@ -36,18 +34,20 @@ function Activities() {
 
             {/* Carousel Content: Display 4 Cards at a time */}
             <div className="flex items-center space-x-4">
-              {ActivityInfo.slice(currentIndex, currentIndex + 4).map((info, index) => (
-                <Recent
-                  key={index}
-                  user={info.user}
-                  location={info.location}
-                  date={info.date}
-                  rating={info.rating}
-                  reviewText={info.reviewText}
-                  reviewText1={info.reviewText1}
-                  images={info.images}
-                />
-              ))}
+              {ActivityInfo.slice(currentIndex, currentIndex + 4).map(
+                (info, index) => (
+                  <Recent
+                    key={index}
+                    user={info.user}
+                    location={info.location}
+                    date={info.date}
+                    rating={info.rating}
+                    reviewText={info.reviewText}
+                    reviewText1={info.reviewText1}
+                    images={info.images}
+                  />
+                )
+              )}
             </div>
 
             {/* Next Button */}

@@ -4,12 +4,12 @@ import SearchBar from "./SearchBar";
 function Navbar() {
   return (
     <section>
-      <div className="hidden lg:flex justify-between items-center">
+      <div className="hidden lg:grid grid-cols-3 items-center ">
         <img src="Logo.png" alt="brandLogo" />
         <SearchBar />
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-end items-center gap-2">
           <Globe size={20} />
-          <button className="bg-quaternary text-quinary rounded-full py-1.5 p-2.5">
+          <button className="bg-quaternary text-quinary rounded-full py-1.5 p-2.5 ">
             MyFeedback for business
           </button>
         </div>

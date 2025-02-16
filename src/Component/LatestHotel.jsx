@@ -21,6 +21,7 @@ function LatestHotel() {
             rating={info.rating}
             reviewCount={info.reviewCount}
             width="100%"
+            link={info.link}
           />
         </div>
       ))}

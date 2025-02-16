@@ -8,6 +8,7 @@ const mockData = [
   { name: "Sunset Cafe", location: "Malaysia", link: "/sunset-cafe" },
   { name: "Tech Repair Service", location: "India", link: "/tech-repair" },
   { name: "City Spa", location: "Dubai", link: "/city-spa" },
+  { name: "All Restaurants", location: "Singapore", link: "/singapore" },
 ];
 
 function SearchBar() {

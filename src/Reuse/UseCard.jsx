@@ -10,6 +10,9 @@ function Card({
   width = "285px",
   background = "#F8F8F8",
   link,
+  flex,
+  imageStyle,
+
 }) {
   const navigate = useNavigate();
   const fullStars = Math.floor(rating);
@@ -56,12 +59,12 @@ function Card({
   return (
     <section>
       <div
-        className="h-auto rounded-b-md rounded-2xl space-y-2 cursor-pointer"
-        style={{ width, background }}
+        className={`${flex} h-auto rounded-b-md rounded-2xl space-y-2 cursor-pointer`}
+        style={{ width, background,}}
         onClick={handleClick}
       >
         {/* Image */}
-        <div className="relative">
+        <div className={` ${imageStyle} relative`}>
           <img
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
